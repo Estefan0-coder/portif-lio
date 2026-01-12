@@ -299,4 +299,50 @@ footer p {
         width: 120px;
         height: 120px;
     }
+
+}
+
+/* Ajustes adicionais para celulares */
+@media (max-width: 480px) {
+    /* Menu: Links menores e mais espaçados */
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    /* Hero: Texto menor */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Projetos: Grid em coluna única */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contatos: Itens em coluna */
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer: Ícones menores */
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link {
+        font-size: 1.2rem;
+    }
+    
+    /* Geral: Padding menor para economizar espaço */
+    section {
+        padding: 3rem 1rem;
+    }
 }
