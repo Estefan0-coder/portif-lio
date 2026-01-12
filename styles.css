@@ -1,0 +1,302 @@
+/* Fundo escuro e tipografia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00bcd4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Seções */
+section {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+/* Hero */
+#hero {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Sobre */
+#about .skills {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill {
+    background: #00bcd4;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Projetos */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #cccccc;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #00bcd4;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.btn:hover {
+    background: #0097a7;
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+/* Contatos */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-weight: 300;
+}
+
+.contact-item a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: rgba(18, 18, 18, 0.9);
+    padding: 2rem 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #0097a7;
+    transform: scale(1.2);
+}
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+/* Layout da seção Sobre */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Foto de Perfil */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bcd4;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade para a foto */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
